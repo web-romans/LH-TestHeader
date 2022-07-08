@@ -1,11 +1,19 @@
 .header-products {
-  @include flex;
-  @include flex-wrap;
-  overflow: hidden;
+  overflow-x: auto;
+  width: 240px !important;
+
+  &__scroll {
+    @include flex;
+    //@include flex-wrap;
+  }
 
   @include medium-tablet {
     justify-content: flex-end;
-    //flex-wrap: nowrap;
+  }
+
+  @include mobile {
+    width: calc(100vw - 30px) !important;
+    flex-wrap: wrap;
   }
 
   &__item {

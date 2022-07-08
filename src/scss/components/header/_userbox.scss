@@ -1,8 +1,8 @@
 .userbox {
+  @include flex-center-between;
+  padding-bottom: var(--indent-small);
+
   @include medium-tablet {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: absolute;
     bottom: 0px;
     left: 0;

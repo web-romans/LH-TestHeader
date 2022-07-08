@@ -32,6 +32,13 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include small-tablet {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        margin-right: -25px;
+      }
     }
 
     &--cart {
@@ -75,6 +82,9 @@
     }
 
     @include small-tablet {
+      display: block;
+      width: 25px;
+      height: 25px;
       font-size: 0;
     }
   }

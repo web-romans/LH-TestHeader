@@ -5,6 +5,7 @@
 
   &__list {
     @include flex-all-center;
+    @include flex-wrap;
   }
 
   &__link {
@@ -17,7 +18,7 @@
     font-weight: 500;
     font-size: 14px;
     letter-spacing: normal;
-    padding: 20px;
+    padding: 10px 20px;
 
     @include tablet {
       padding: 10px;

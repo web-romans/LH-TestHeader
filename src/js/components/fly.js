@@ -1,6 +1,9 @@
 
 
+import { throttle } from '../functions/throttle';
+
 const mediumTablet = 1000;
+let documentWIdth = document.documentElement.clientWidth;
 
 function move(elSelector, tabletParentSelector, tabletPosSelector, descParentSelector, descPosSelector) {
   const clientWidth = document.documentElement.clientWidth;
@@ -19,7 +22,7 @@ function moveBlock(item, content, pos) {
   pos !== "" ? content.insertBefore(item, pos) : content.appendChild(item);
 }
 
-function fly() {
+const fly = () => {
   move(".logo", ".header-top", ".top-menu", ".header__container", ".header-content");
   move(".userbar", ".header-top", ".burger", ".header-content__content", ".header-products");
   move(".region", ".header-top", ".burger", ".header-contacts", "null");
@@ -28,8 +31,15 @@ function fly() {
   move(".userbox", ".top-menu", ".header-contacts", ".header-top", "null");
 }
 
-fly();
+
+
+let flew = throttle(fly)
+
+flew();
 
 window.addEventListener("resize", () => {
-  fly();
+  const clientWidth = document.documentElement.clientWidth;
+  if (clientWidth !== documentWIdth) {
+    flew();
+  }
 });
