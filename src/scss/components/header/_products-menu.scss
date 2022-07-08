@@ -1,0 +1,36 @@
+.products-menu {
+  @include flex-all-center;
+  background-color: var(--color-black);
+  height: 100%;
+
+  &__list {
+    @include flex-all-center;
+  }
+
+  &__link {
+    @include flex-all-center;
+    @extend %transition-bg-c-c;
+    height: 100%;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: normal;
+    padding: 20px;
+
+    @include tablet {
+      padding: 10px;
+    }
+
+    &._active {
+      background-color: var(--color-primary);
+      color: var(--color-black);
+    }
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-black);
+    }
+  }
+}

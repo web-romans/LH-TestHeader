@@ -1,0 +1,25 @@
+.sale {
+  @include transition-c;
+  @include flex-all-center;
+  color: var(--color-black);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: normal;
+  background-color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-white);
+  }
+
+  @include medium-tablet {
+    background-color: var(--color-white);
+    padding: var(--indent-medium);
+    width: 100%;
+
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+}

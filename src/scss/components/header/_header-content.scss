@@ -1,0 +1,44 @@
+.header-content {
+  @include flex-start-between;
+  @include flex-wrap;
+
+  &__top {
+    @include flex-center-between;
+    flex: 0 1 100%;
+    margin-bottom: 15px;
+
+    @include tablet {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__content {
+    @include flex-start-between;
+    flex: 0 1 100%;
+
+    > * {
+      &:not(&:last-child) {
+        margin-right: var(--indent-large);
+      }
+    }
+
+    @include small-tablet {
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+
+      > * {
+        width: 100%;
+        &:not(&:last-child) {
+          margin-right: 0;
+          margin-bottom: var(--indent-medium);
+        }
+      }
+    }
+  }
+
+  &__products {
+    flex: 0 1 auto;
+  }
+}

@@ -1,0 +1,41 @@
+:root {
+  // indents
+  --indent-large: 30px;
+  --indent-medium: 15px;
+  --indent-small: 8px;
+
+  @include tablet {
+    --indent-large: 15px;
+  }
+
+  @include mobile {
+    --indent-medium: 10px;
+  }
+
+  // base
+  --font-family: "Roboto", sans-serif;
+  --content-width: 1170px;
+  --container-offset: var(--indent-medium);
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --color-primary: #ffcc00;
+  --color-black: #252525;
+  --color-white: #ffffff;
+  --color-gray: #d7d7d7;
+
+  // sizes
+  --burger-width: 38px;
+  --burger-height: 26px;
+  --burger-line-height: 3px;
+
+  --logo-width: 210px;
+
+  @include tablet {
+    --logo-width: 100px;
+  }
+
+  @include medium-tablet {
+    --logo-width: 38px;
+  }
+}

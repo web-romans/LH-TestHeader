@@ -1,0 +1,23 @@
+%text-height {
+  line-height: 1.17;
+}
+
+@mixin text-height {
+  @extend %text-height;
+}
+
+%black-color {
+  color: var(--color-black);
+}
+
+@mixin black-color {
+  @extend %black-color;
+}
+
+%white-color {
+  color: var(--color-white);
+}
+
+@mixin white-color {
+  @extend %white-color;
+}

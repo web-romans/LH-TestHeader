@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--color-white);
+  padding: var(--indent-medium) 0;
+
+  &__container {
+    @include flex-stretch-between;
+    @include flex-wrap;
+  }
+
+  &__logo {
+    flex: 0 0 var(--logo-width);
+    margin-right: var(--indent-large);
+  }
+
+  &__content {
+    flex: 1 1 calc(100% - var(--logo-width) - var(--indent-large));
+  }
+
+  &__footer {
+    margin-top: 25px;
+    flex: 0 1 100%;
+  }
+
+  &__baner {
+    margin-right: var(--indent-large);
+  }
+}

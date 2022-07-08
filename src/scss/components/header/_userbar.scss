@@ -1,0 +1,81 @@
+.userbar {
+  @include flex;
+  @include flex-column;
+
+  @include medium-tablet {
+    flex: 1 1 auto;
+    margin-right: var(--indent-large);
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    @include inline-flex;
+    @include flex-align-center;
+    text-decoration: none;
+    font-size: 14px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 9px;
+
+    @include medium-tablet {
+      margin-bottom: 0px;
+      margin-left: var(--indent-medium);
+    }
+
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--cart {
+      &::before {
+        background-image: url("@img/ico/cart.svg");
+      }
+
+      @include medium-tablet {
+        order: 3;
+      }
+    }
+
+    &--favorite {
+      &::before {
+        background-image: url("@img/ico/favorite.svg");
+      }
+
+      @include medium-tablet {
+        order: 2;
+      }
+    }
+
+    &--compare {
+      &::before {
+        background-image: url("@img/ico/compare.svg");
+      }
+
+      @include medium-tablet {
+        order: 1;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--color-black);
+    text-decoration: underline;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @include small-tablet {
+      font-size: 0;
+    }
+  }
+}

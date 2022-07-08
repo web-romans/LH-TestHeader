@@ -1,0 +1,31 @@
+.header-contacts {
+  &__item {
+    @include flex;
+    width: 100%;
+    &:not(&:nth-last-child(1)) {
+      margin-bottom: var(--indent-medium);
+    }
+  }
+
+  @include medium-tablet {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .phone-num {
+      order: 1;
+      margin-bottom: 10px;
+      justify-content: flex-end;
+    }
+
+    .working-hours {
+      order: 2;
+      margin-bottom: 0 !important;
+    }
+  }
+}

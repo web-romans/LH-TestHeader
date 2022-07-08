@@ -1,0 +1,40 @@
+.header-footer {
+  @include flex-center-between;
+
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 34px;
+  overflow: hidden;
+  position: relative;
+
+  @include medium-tablet {
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: auto;
+    box-shadow: none;
+    border-radius: 0px;
+    margin-top: 0;
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+
+    @include medium-tablet {
+      display: none;
+    }
+  }
+
+  &__search {
+    padding: var(--indent-small);
+    height: 100%;
+
+    @include medium-tablet {
+      width: 100%;
+    }
+  }
+
+  &__sale {
+    padding: 0 var(--indent-medium);
+    height: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+.phone-num {
+  @include transition-o;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

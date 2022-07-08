@@ -1,0 +1,7 @@
+.working-hours {
+  @include flex-center-between;
+
+  &__name {
+    font-weight: 700;
+  }
+}
